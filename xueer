@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-color: #f7f7f7;
+    }
+
+    .navbar{
+        position: fixed;
+        display: flex;
+        align-items: center;
+        height: 80px;
+        width: 1440px;
+        background-color: #ffffff;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+    .logo1{
+        float: left;
+        height: 80px;
+        margin-left: 220px;
+        
+    }
+
+    .navbar ul{
+        float: left;
+        list-style: none;
+        margin-left: 50px;
+    }
+
+   .navbar ul li{
+
+        float: left;
+        padding-right: 65px;
+    }
+
+   .navbar ul li a{
+        display: block;
+        text-decoration: none;
+        color: #333;
+        font-size: 18px;
+        height: 80px;
+        line-height: 80px;
+    }
+    .navbar ul li a:hover{
+        color: #ff0000;
+        border-top: #ff0000 2px solid;
+    }
+
+   .navbar input[type="text"]{
+        float: left;
+        height: 30px;
+        width: 236px;
+        border: 2px solid #ff0000;
+        background-color: #fff;
+        padding-left: 10px;
+        margin-left: 115px;
+    }
+    .search{
+        float: left;
+        height: 34px;
+        width: 80px;
+        border: none;
+        background-color: #ff0000;
+
+    }
+    .logo2{
+        float: left;
+        height: 80px;
+        margin-left: 55px;
+    }
+    .out{
+        float: right;
+        height: 30px;
+        width: 95px;
+        border: none;
+        background-color: #1dc091;
+        color: #fff;
+        font-size: 14px;
+        text-align: center;
+        line-height: 30px;
+        margin-right: 220px;
+    }
+    .content1{
+        height: 750px;
+        width: 1000px;
+        margin: 0 auto;
+        margin-top: 80px;
+        background-color: #ffffff;
+    }
+    .content1-background{
+        height: 350px;
+        width: 1000px;
+        margin: 0 auto;
+        background-color: #1dc091;
+    }
+
+    .content1-container{
+        width: 1000px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .content1-container>div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+   .circle{
+        height: 96px;
+        width: 96px;
+        background-color: #fff;
+        border-radius: 50%;
+        border: 2px solid #1dc091;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        color: #1dc091;
+        margin-top: 40px;
+    }
+
+    .circle:hover{
+        background-color: #1dc091;
+        color: #fff;
+    }
+
+    .content1-container div>ul{
+        margin-top: 40px;
+    }
+
+   .content1-container div ul>li{
+        margin-bottom: 5px;
+    }
+
+    .content1-container div ul li>p{
+        font-size: 15px;
+        color: #999;
+    }
+
+   .content1-container div ul li>a{
+        display: block;
+        text-decoration: none;
+        color: #333;
+        font-size: 18px;
+        height: 25px;
+        line-height: 25px;
+    }
+
+   .content1-container div ul li>a:hover{
+        color: #ff0000;
+    }
+
+
+    .content1-container div div>img{
+        display: flex;
+        margin-top: 30px;
+    }
+
+    
+    .content2{
+        height: 360px;
+        width: 1000px;
+        margin: 10px auto;
+        background-color: #ffffff;
+    }
+
+    h2{
+        text-align: center;
+        font-size: 20px;
+        color: #333;
+        padding-top: 32px;
+    }
+
+    .content2-title p{
+        display: block;
+        text-align: center;
+        font-size: 14px;
+        color: #1dc091;
+        margin: 0 auto;
+    }
+
+    .content2-container{
+        display: flex;
+
+    }
+
+    .content2-box1{
+        width: 140px;
+        height: 103px;
+        border: #1dc091 2px solid;
+        margin-left: 150px;
+        margin-top: 20px;
+    }
+
+    .content2-container p{
+        display: block;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 200;
+        color: #878888;
+    }
+
+    .content2-container h2{
+        display: block;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 200;
+        color: #878888;
+    }
+
+    .content2-box2{
+        width: 144px;
+        height: 103px;
+         border-bottom: #1dc091 2px solid;
+         border-top: transparent 2px solid;
+        margin-top: 20px;
+    }
+
+
+
+    .content2-container a{
+        display: block;
+        text-align: center;
+        padding-top: 22px;
+        font-size: 40px;
+        font-weight: 200;
+        color: #f44336;
+    }
+
+    .content2-box3{
+        width: 140px;
+        height: 103px;
+        border: #1dc091 2px solid;
+        margin-top: 20px;
+    }
+
+    .content2-box4{
+        width: 144px;
+        height: 103px;
+         border-bottom: #1dc091 2px solid;
+         border-top: transparent 2px solid;
+        margin-top: 20px;
+    }
+
+    .content2-box5{
+        width: 140px;
+        height: 103px;
+        border: #1dc091 2px solid;
+        margin-top: 20px;
+    }
+
+    .content2-box6{
+        width: 140px;
+        height: 103px;
+        margin-left: 150px;
+        border-right: #1dc091 2px solid;
+        border-left: transparent 2px solid;
+         border-top: transparent 2px solid;
+
+    }
+
+    .content2-box7{
+        width: 144px;
+        height: 103px;
+        border-bottom: #1dc091 2px solid;
+    }
+
+    .content2-box8{ width: 140px;
+        height: 103px;
+        border-right: #1dc091 2px solid;
+        border-left: #1dc091 2px solid;
+         border-top: transparent 2px solid;
+
+    }
+
+    .content2-box9{
+        width: 144px;
+        height: 103px;
+        border-bottom: #1dc091 2px solid;
+    }
+
+    .content2-box10{ width: 140px;
+        height: 103px;
+        border-right: transparent 2px solid;
+        border-left: #1dc091 2px solid;
+         border-top: transparent 2px solid;
+
+    }
+        
+    .content2-box1:hover{
+        background-color: #1dc091;
+        color: #fff;
+    }
+
+    .content2-box3:hover{
+        background-color: #1dc091;
+        color: #fff;
+    }
+
+    .content2-box5:hover{
+        background-color: #1dc091;
+        color: #fff;
+    }
+
+    .content2-box7:hover{
+        background-color: #1dc091;
+        color: #fff;
+    }
+
+    .content2-box9:hover{
+        background-color: #1dc091;
+        color: #fff;
+    }
+
+    .content3{
+        height: 410px;
+        width: 1000px;
+        margin: 10px auto;
+        background-color: #ffffff;
+    }
+
+    .content3-container{
+        display: flex;
+        justify-content: space-around;
+        margin: 30px 125px;
+    }
+
+   .content3-container-item{
+        width: 175px;
+        height: 105px;
+        margin-top: 65px;
+        background-color: #f77b72;
+    }
+
+    .content3-container-item p{
+        display: block;
+        text-align: center;
+        margin:  0 auto;
+        font-size: 16px;
+        font-weight: 200;
+        color: #fff;
+    }
+
+    .content3-container-item h2{
+        display: block;
+        text-align: center;
+        margin:  0 auto;
+        font-weight: 300;
+        color: #fff;
+    }
+
+    .content3-container-item:hover{
+        background-color: #ff0000;
+    }
+    
+
+</style>
+<body>
+    <!-- 导航栏 -->
+    <div class="navbar">
+        <div class="logo1">
+            <img src="C:\Users\Lenovo\Desktop\木犀前端\作业1\xueerlogo1.jpg" alt="logo">
+        </div>
+
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">分类查看</a></li>
+        </ul>
+
+        <input type="text" >
+
+        <button class="search"><img src="C:\Users\Lenovo\Desktop\木犀前端\作业1\xueer-恢复的-恢复的.jpg" alt="search"></button>
+
+        <div class="logo2">
+            <img src="C:\Users\Lenovo\Desktop\木犀前端\作业1\xueer-恢复的-恢复的2.jpg" alt="logo">
+        </div>
+
+        <button class="out">退出</button>
+
+    </div>
+
+     
+    <div class="content1">
+        <div class="content1-background">
+            <img src="" alt="background-image">
+        </div>
+        <div class="content1-container">
+            <div>
+                <div class="circle"><p>公</p></div>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="#">界面与设计应用</a>
+                            <p>房子</p>
+                        </li>
+                        <li>
+                            <a href="#">java程序编程</a>
+                            <p>赵三金</p>
+                        </li>
+                        <li>
+                            <a href="#">设计师的自我修养</a>
+                            <p>分享课程</p>
+                        </li>
+                    </ul>
+                    <div>
+                        <img src="" alt="image">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="circle"><p>通</p></div>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="#">计算机基础</a>
+                            <p>胡薇</p>
+                        </li>
+                        <li>
+                            <a href="#">植物观赏学基础</a>
+                            <p>韩一尾</p>
+                        </li>
+                        <li>
+                            <a href="#">生活常识101</a>
+                            <p>分享</p>
+                        </li>
+                    </ul>
+                    <div>
+                        <img src="" alt="image">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="circle"><p>素</p></div>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="#">新生引导课堂</a>
+                            <p>开学季</p>
+                        </li>
+                        <li>
+                            <a href="#">党课精神研讨课</a>
+                            <p>分享课程</p>
+                        </li>
+                        <li>
+                            <a href="#">专业方向</a>
+                            <p>毕业生</p>
+                        </li>
+                    </ul>
+                    <div>
+                        <img src="" alt="image">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="circle"><p>专</p></div>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="#">影视广告摄影基础</a>
+                            <p>分享课程</p>
+                        </li>
+                        <li>
+                            <a href="#">程序员的养成</a>
+                            <p>赵多金</p>
+                        </li>
+                        <li>
+                            <a href="#">如何让设计师改稿</a>
+                            <p>甲方</p>
+                        </li>
+                    </ul>
+                    <div>
+                        <img src="" alt="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="content2">
+        <div class="content2-title">
+            <h2>最热课程动态</h2>
+            <p>精心为您推荐最佳口碑课程排行NO.1-NO.5</p>
+        </div>
+        <div class="content2-container">
+            <div class="content2-box1">
+                <h2>常勇</h2>
+                <p>《化学生活》</p>
+            </div>
+            <div class="content2-box2">
+                <a href="#">02</a>
+            </div>
+            <div class="content2-box3">
+                <h2>张勇</h2>
+                <p>《java语言程序设计》</p>
+            </div>
+            <div class="content2-box4">
+                <a href="#">04</a>
+            </div>
+            <div class="content2-box5">
+                <h2>张国</h2>
+                <p>《计算机组装》</p>
+            </div>
+        </div>
+        <div class="content2-container">
+            <div class="content2-box6">
+                <a href="#">01</a>
+            </div>
+            <div class="content2-box7">
+                <h2>李达</h2>
+                <p>《大学生语文》</p>
+            </div>
+            <div class="content2-box8">
+                <a href="#">03</a>
+            </div>
+            <div class="content2-box9">
+                <h2>苏燕</h2>
+                <p>《视觉语言》</p>
+            </div>
+            <div class="content2-box10">
+                <a href="#">05</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content3">
+        <div class="content2-title">
+            <h2>猜你喜欢的课程</h2>
+            <p>根据您的浏览记录，推荐相似课程列表</p>
+        </div>
+        <div class="content3-container">
+            <div class="content3-container-item">
+                <h2>《毛泽东思想》</h2>
+                <p>赵三金</p>
+            </div>
+            <div class="content3-container-item">
+                <h2>《邓小平理论》</p>
+                <p>胡一薇</p>
+            </div>
+            <div class="content3-container-item">
+                <h2>《科学发展观》</h2>
+                <p>梁非凡</p>
+            </div>
+            <div class="content3-container-item">
+                <h2>《三个代表》</h2>
+                <p>韩一尾</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
