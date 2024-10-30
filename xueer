@@ -40,7 +40,6 @@
     }
 
    .navbar ul li{
-
         float: left;
         padding-right: 65px;
     }
@@ -50,12 +49,14 @@
         text-decoration: none;
         color: #333;
         font-size: 18px;
-        height: 80px;
-        line-height: 80px;
+        line-height: 76px;
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid transparent;
     }
     .navbar ul li a:hover{
         color: #ff0000;
-        border-top: #ff0000 2px solid;
+        border-top: 2px solid #ff0000;
+        border-bottom: 2px solid transparent;
     }
 
    .navbar input[type="text"]{
@@ -65,7 +66,7 @@
         border: 2px solid #ff0000;
         background-color: #fff;
         padding-left: 10px;
-        margin-left: 115px;
+        margin-left: 10px;
     }
     .search{
         float: left;
@@ -159,14 +160,17 @@
         line-height: 25px;
     }
 
-   .content1-container div ul li>a:hover{
+    
+    
+   .content1-container div ul li a:hover{
         color: #ff0000;
     }
 
-
+    
     .content1-container div div>img{
         display: flex;
-        margin-top: 30px;
+        margin-top: 15px;
+        margin-left: 60px;
     }
 
     
@@ -180,7 +184,6 @@
     h2{
         text-align: center;
         font-size: 20px;
-        color: #333;
         padding-top: 32px;
     }
 
@@ -197,20 +200,13 @@
 
     }
 
-    .content2-box1{
-        width: 140px;
-        height: 103px;
-        border: #1dc091 2px solid;
-        margin-left: 150px;
-        margin-top: 20px;
-    }
+ 
 
     .content2-container p{
         display: block;
         text-align: center;
         font-size: 14px;
         font-weight: 200;
-        color: #878888;
     }
 
     .content2-container h2{
@@ -218,6 +214,14 @@
         text-align: center;
         font-size: 16px;
         font-weight: 200;
+    }
+
+    .content2-box1{
+        width: 140px;
+        height: 103px;
+        border: #1dc091 2px solid;
+        margin-left: 150px;
+        margin-top: 20px;
         color: #878888;
     }
 
@@ -227,6 +231,7 @@
          border-bottom: #1dc091 2px solid;
          border-top: transparent 2px solid;
         margin-top: 20px;
+        color: #878888;
     }
 
 
@@ -245,6 +250,7 @@
         height: 103px;
         border: #1dc091 2px solid;
         margin-top: 20px;
+        color: #878888;
     }
 
     .content2-box4{
@@ -260,6 +266,7 @@
         height: 103px;
         border: #1dc091 2px solid;
         margin-top: 20px;
+        color: #878888;
     }
 
     .content2-box6{
@@ -276,9 +283,11 @@
         width: 144px;
         height: 103px;
         border-bottom: #1dc091 2px solid;
+        color: #878888;
     }
 
-    .content2-box8{ width: 140px;
+    .content2-box8{ 
+        width: 140px;
         height: 103px;
         border-right: #1dc091 2px solid;
         border-left: #1dc091 2px solid;
@@ -290,6 +299,7 @@
         width: 144px;
         height: 103px;
         border-bottom: #1dc091 2px solid;
+        color: #878888;
     }
 
     .content2-box10{ width: 140px;
@@ -322,10 +332,11 @@
 
     .content2-box9:hover{
         background-color: #1dc091;
-        color: #fff;
+        color: #ffffff;
     }
 
     .content3{
+        position: relative;
         height: 410px;
         width: 1000px;
         margin: 10px auto;
@@ -339,10 +350,12 @@
     }
 
    .content3-container-item{
+        position: relative;
         width: 175px;
         height: 105px;
         margin-top: 65px;
         background-color: #f77b72;
+        z-index: 9;
     }
 
     .content3-container-item p{
@@ -361,9 +374,44 @@
         font-weight: 300;
         color: #fff;
     }
+    .content3-container-item img{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+        display: none;
+    }
 
     .content3-container-item:hover{
         background-color: #ff0000;
+
+    }
+
+    .content3-container-item:hover img{
+        transform: translate(-50%, -90%) ;
+        display: block;
+        animation: rabit 1s linear ;
+        z-index: -1;
+    }
+
+    @keyframes rabit{
+        0%{
+            transform: translate(-50%, -10%) ;
+            opacity: 0;
+        }
+        50%{
+            transform: translate(-50%, -60%) ;
+            opacity: 0.2;
+        }
+        70%{
+            transform: translate(-50%, -90%) ;
+            opacity: 0.8;
+        }
+        100%{
+            transform: translate(-50%, -90%) ;
+            opacity: 1;
+        }
     }
     
 
@@ -372,7 +420,7 @@
     <!-- 导航栏 -->
     <div class="navbar">
         <div class="logo1">
-            <img src="C:\Users\Lenovo\Desktop\木犀前端\作业1\xueerlogo1.jpg" alt="logo">
+            <img src="xueerlogo1.jpg" alt="logo">
         </div>
 
         <ul>
@@ -382,10 +430,10 @@
 
         <input type="text" >
 
-        <button class="search"><img src="C:\Users\Lenovo\Desktop\木犀前端\作业1\xueer-恢复的-恢复的.jpg" alt="search"></button>
+        <button class="search"><img src="xueersearch.jpg" alt="search"></button>
 
         <div class="logo2">
-            <img src="C:\Users\Lenovo\Desktop\木犀前端\作业1\xueer-恢复的-恢复的2.jpg" alt="logo">
+            <img src="xueerlogo2.jpg" alt="logo">
         </div>
 
         <button class="out">退出</button>
@@ -395,7 +443,7 @@
      
     <div class="content1">
         <div class="content1-background">
-            <img src="" alt="background-image">
+            <img src="xueerimagine.jpg"background-image">
         </div>
         <div class="content1-container">
             <div>
@@ -416,7 +464,7 @@
                         </li>
                     </ul>
                     <div>
-                        <img src="" alt="image">
+                        <img src="xueerlogo3.jpg" alt="image">
                     </div>
                 </div>
             </div>
@@ -438,7 +486,7 @@
                         </li>
                     </ul>
                     <div>
-                        <img src="" alt="image">
+                        <img src="xueerlogo3.jpg" alt="image">
                     </div>
                 </div>
             </div>
@@ -460,7 +508,7 @@
                         </li>
                     </ul>
                     <div>
-                        <img src="" alt="image">
+                        <img src="xueerlogo3.jpg" alt="image">
                     </div>
                 </div>
             </div>
@@ -482,7 +530,7 @@
                         </li>
                     </ul>
                     <div>
-                        <img src="" alt="image">
+                        <img src="xueerlogo3.jpg" alt="image">
                     </div>
                 </div>
             </div>
@@ -546,22 +594,30 @@
             <div class="content3-container-item">
                 <h2>《毛泽东思想》</h2>
                 <p>赵三金</p>
+                <img src="xueerrabit.jpg" alt="image">
             </div>
             <div class="content3-container-item">
                 <h2>《邓小平理论》</p>
                 <p>胡一薇</p>
+                <img src="xueerrabit.jpg" alt="image">
             </div>
             <div class="content3-container-item">
                 <h2>《科学发展观》</h2>
                 <p>梁非凡</p>
+                <img src="xueerrabit.jpg" alt="image">
             </div>
             <div class="content3-container-item">
                 <h2>《三个代表》</h2>
                 <p>韩一尾</p>
+                <img src="xueerrabit.jpg" alt="image">
             </div>
+
         </div>
     </div>
 
+
+</body>
+</html>
 
 </body>
 </html>
